@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Form from './Form'
+// import Form from './Form'
+import Reps from './Reps'
+// import RepItems from './RepItems'
+
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      firstName: [],
-      lastNAme:[],
-      dob: "",
+      searchQuery: "",
+      firstName: "",
+      lastName:"",
       location: "",
       party: "",
+      dob: "",
+      twitter: "",
       nextElection: "",
-      twitter: ""
-    }
+      members: []
+  }
+    this.handleChange = this.handleChange.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
+    // this.searchHandler = this.searchHandler.bind(this);
   }
 
   componentDidMount() {
@@ -27,29 +35,58 @@ class App extends Component {
       .then( data => {
         // console.log(data.results[0].members)
         let mems = data.results[0].members.map(d => {
-      return({
-      firstName: d.first_name,
-      lastName: d.last_name,
-      dob: d.date_of_birth,
-      location:d.state,
-      party:d.party,
-      nextElection: d.next_election,
-      twitter: d.twitter_account
+          return({
+          firstName: d.first_name,
+          lastName: d.last_name,
+          location:d.state,
+          party:d.party,
+          dob:d.date_of_birth,
+          twitter: d.twitter_account,
+          nextElection: d.next_election
+        })
       })
+      // console.log(mems)
+      this.setState(prevState => ({
+        members:mems
+      }))
     })
-      console.log(mems)
-  })
   }
 
+// searchHandler(event){
+//   this.setState = ({location:event.target.value})
+// }
 
+handleChange(e){
+    this.setState({
+      searchQuery: e.target.value
+
+    });
+  }
+
+  // {showMembers}
 
   render(){
     // console.log(this.state.results)
+    const showMembers = this.state.members.map((d, i) => {
+      return <Reps members={d}/>
+    })
+
+           //  searchQuery={this.state.searchQuery}
+
+
     return (
-      <div>
+      <div className= "page">
         <h1>Whomst my Rep</h1>
-        <p>{this.componentDidMount()}</p>
-        <Form />
+        <form>
+          <input
+          type="text"
+          // handleChange={this.handleChange}
+          />
+          <button>SEARCH</button>
+        </form>
+        <div className="members">
+           {showMembers}
+        </div>
       </div>
     )
   }
