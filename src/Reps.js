@@ -23,8 +23,8 @@ class Reps extends Component {
 
     return (
       <div>
-        <ul>
-          <li onClick={this.toggleInfo}>{this.props.members.firstName} {this.props.members.lastName}</li>
+        <div className="member-container">
+          <div className="name" onClick={this.toggleInfo}>{this.props.members.firstName} {this.props.members.lastName}</div>
 
             {
             this.state.show &&
@@ -36,7 +36,7 @@ class Reps extends Component {
             </div>
             }
 
-        </ul>
+        </div>
       </div>
     );
   }
