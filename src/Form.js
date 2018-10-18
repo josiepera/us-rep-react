@@ -1,22 +1,12 @@
 import React, { Component } from 'react';
 
 
-class Form extends Component {
-
-  render() {
-    console.log(this.props.searchQuery);
-    return (
-      <div className="form">
-        <input
-          type="text"
-          value={this.props.searchQuery}
-          onChange={this.props.handleChange}
-          />
-        <button onClick={this.props.handleClick}>Send</button>
-      </div>
-    );
-  }
+const Form = (props) => {
+  return (
+      <form onSubmit={props.getStateName} >
+        <input type="text" name="stateName" placeholder="State Abreviation" />
+      </form>
+    )
 }
 
-export default Form
-
+export default Form;
