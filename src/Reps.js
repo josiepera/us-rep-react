@@ -16,7 +16,7 @@ class Reps extends Component {
       show: !prevState.show
     }));
   }
-
+  console.log("Outlaw Josie")
   render() {
 
     const { item } = this.props
