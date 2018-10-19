@@ -23,24 +23,28 @@ class Reps extends Component {
 
     return (
       <div>
-        <div className="member-container">
+        <div className="member-container" onClick={this.toggleInfo}>
           <div className="name" onClick={this.toggleInfo}>{this.props.members.firstName} {this.props.members.lastName}</div>
 
             {
             this.state.show &&
             <div>
               <div>{this.props.members.dob}</div>
-              <div>{this.props.members.location}-{this.props.members.party}</div>
+              <div>{this.props.members.party}</div>
               <div>{this.props.members.twitter}</div>
-              <div>{this.props.members.nextElection}</div>
+              <div></div>
             </div>
             }
 
         </div>
       </div>
     );
-  }
+
 }
+
+}
+
+
 
 
 
