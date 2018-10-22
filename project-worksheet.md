@@ -75,14 +75,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 4hrs|  |  |
-| Fetching info for each rep | H | 4hrs|  |  |
-| Organize by State | H | 5hrs  |  |  |
-| Clicking on rep for more info | M |  4hrs |  |  |
-| CSS Styling | M | 3hrs  |  |  |
-| NYT Profiles | L | 1hr |  |  |
-| Adding more relevant info | L |  2hr |  |  |
-| Total | H | 23hrs |  |  |
+| Adding Form and search| H | 9hrs| 10hr | 10hrs |
+| Fetching info for each rep | H | 4hrs| 4hrs | 4hrs |
+| Clicking on rep for more info | M |  4hrs | 2hrs | 2hrs |
+| CSS Styling | M | 3hrs  | 4hrs | 8hrs |
+| NYT Profiles | L | 1hr | 1hr | 1hr |
+| Adding more relevant info | L |  2hr | 2hrs | 2hrs |
+| Total | H | 23hrs | 23hrs | 28hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.

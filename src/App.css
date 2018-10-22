@@ -51,30 +51,20 @@ img{
   overflow: scroll;
 }
 
-.close{
-  color: #777;
-  font: 14px/100% arial, sans-serif;
-  position: absolute;
-  right: 5px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 #fff;
-  top: 5px;
-  text-content: '✖';
-}
-
 .below{
 margin-left: 15px;
 }
-
 
 .type span {
   display:block;
 }
 
 .type {
+  margin-bottom: 0px;
+
   width:400px;
   height:400px;
-  margin:50px auto;
+  margin:10px auto;
   text-align: center;
   color: #F5C4B6;
   line-height:0.85;
@@ -112,7 +102,6 @@ margin-left: 15px;
   font-size: 150px;
   margin-top:-12px;
 }
-
 
 button {
   font-size: 100%;
@@ -263,7 +252,6 @@ input {
   font-size:16px;
   margin:5px;
 }
-
 
 @keyframes App-logo-spin {
   from {
