@@ -47,18 +47,6 @@ class App extends Component {
       }))
     }
 
-  //  getImage() {
-  //   let url = (`https://theunitedstates.io/images/congress/original/${this.state.id}.jpg`)
-  //   fetch(url)
-  //     .then( res => res.json() )
-  //     .then( data => {
-  //       console.log(data)
-  //       this.setState(prevState => ({
-  //         images: data
-  //       }))
-  //     })
-  // }
-
   render(){
     const showMembers = this.state.members.map((d, i) => {
       return <Reps members={d} />
@@ -66,6 +54,7 @@ class App extends Component {
 
       return (
         <div className= "page">
+            <div className="bgc-pic"></div>
             <div className= "type">
               <span>Who</span>
               <span>Reps</span>

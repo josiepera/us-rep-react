@@ -2,10 +2,6 @@
 @import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
-/**{
-  border: 2px solid black;
-}*/
-
 .App {
   text-align: center;
 }
@@ -70,7 +66,7 @@ img{
 margin-left: 15px;
 }
 
-/*------------------------*/
+
 .type span {
   display:block;
 }
@@ -116,7 +112,7 @@ margin-left: 15px;
   font-size: 150px;
   margin-top:-12px;
 }
-/**/
+
 
 button {
   font-size: 100%;
@@ -126,7 +122,6 @@ button {
   padding-right: 30px;
   padding-left: 30px;
   position: relative;
-  /*background-color:rgb(41,127,184);*/
   background-color: #f8455f;
   color:rgb(255,255,255);
   text-decoration: none;
@@ -152,7 +147,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 
 .twitter:before{
       font-family: "FontAwesome";
-      content: "\f099"; /* add twitter icon */
+      content: "\f099";
 }
 
 .twitter:hover{
@@ -160,8 +155,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
       background: #fff;
 }
 
-.smGlobalBtn { /* global button class */
-    /*display: inline-block;*/
+.smGlobalBtn {
     cursor: pointer;
     width: 35px;
     height: 35px;
@@ -183,15 +177,15 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
     background: #4060A5;
 }
 
-.facebook:before{ /* use :before to add the relevant icons */
+.facebook:before{
     font-family: "FontAwesome";
-    content: "\f09a"; /* add facebook icon */
+    content: "\f09a";
 }
 
 .facebook:hover{
     color: #4060A5;
     background: #fff;
-    border-color: #4060A5; /* change the border color on mouse hover */
+    border-color: #4060A5;
 }
 
 .socialBtn{
@@ -199,10 +193,6 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 }
 
 .form {
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
-  /*margin : 0 auto;*/
   text-align: center;
   width: 200px;
 
@@ -212,6 +202,8 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .members{
@@ -219,7 +211,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   flex-wrap: wrap;
   margin-right: auto;
   margin-left: auto;
- /* align-items: center;*/
+
 }
 
 .root{
@@ -227,6 +219,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 }
 
 .memberContainer{
+  border-radius: 40px;
   margin-left: auto;
   margin-right: auto;
   display:flex;
@@ -235,8 +228,8 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   margin-right: 15px;
   margin-bottom:15px;
   margin-top: 15px;
-  height:175px;
-  width: 320px;
+  height:230px;
+  width: 185px;
   justify-content: center;
   align-items: center;
   box-shadow: 10px 5px 40px 20px darken(#341cac, 5%);
@@ -258,9 +251,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 }
 
 input {
-  /*display: flex;*/
   border-radius:5px;
-  /*padding:10px;*/
   padding: .75rem 1.875rem;
   height:30px;
   width:240px;
@@ -270,7 +261,6 @@ input {
   font-family:'Lato';
   font-weight:400;
   font-size:16px;
-  /*position:relative;*/
   margin:5px;
 }
 
