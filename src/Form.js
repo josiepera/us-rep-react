@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 
 const Form = (props) => {
 
   return (
-      <form onSubmit={props.getStateName} >
+      <form onSubmit={props.getStateName} className="formContainer">
         <input type="text" name="stateName" placeholder="State Abreviation" />
         <button>Submit</button>
       </form>

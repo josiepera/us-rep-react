@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-// import RepItems from './RepItems'
-
+// import Portrait from './Portrait'
 
 class Reps extends Component {
   constructor(props){
@@ -18,28 +17,29 @@ class Reps extends Component {
   }
 
   render() {
-
-    const { item } = this.props
-
     return (
       <div>
-        <div className="member-container" onClick={this.toggleInfo}>
-          <div className="name" onClick={this.toggleInfo}>{this.props.members.firstName} {this.props.members.lastName}</div>
+        <div className="memberContainer" onClick={this.toggleInfo}>
 
+          <h2 className="name" onClick={this.toggleInfo}>{this.props.members.firstName} {this.props.members.lastName}</h2>
             {
-            this.state.show &&
-            <div>
-              <div>{this.props.members.dob}</div>
-              <div>{this.props.members.party}</div>
-              <div>{this.props.members.twitter}</div>
-              <div></div>
-            </div>
+              this.state.show &&
+              <div className="content">
+                <div className="close"></div>
+                <img src="https://foreignpolicymag.files.wordpress.com/2017/10/gettyimages-83951850.jpg?w=960" alt="" />
+              <div className="below">
+                <h2>{this.props.members.firstName} {this.props.members.lastName}</h2>
+                <p>District-{this.props.members.district}({this.props.members.party})</p>
+                <div className="socialBtn">
+                  <a href= { `https://twitter.com/${this.props.members.twitter}` } className="twitter smGlobalBtn"></a>
+                  <a href= { `https://facebook.com/${this.props.members.facebook}` } className="facebook smGlobalBtn"></a>
+                </div>
+              </div>
+              </div>
             }
-
         </div>
       </div>
     );
-
 }
 
 }

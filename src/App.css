@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
 @import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 
 /**{
   border: 2px solid black;
@@ -14,6 +15,23 @@ body {
   background: radial-gradient(#336699, #385a7c);
   font-size: 30px;
   overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+  font-size: 17px;
+}
+p{
+  font-size: 13px;
+}
+img{
+  height: 150px;
+  width: 100%;
+  padding: 0px;
+  width:100%;
+  background-size:cover;
+  color:#fff;
+  border-radius: 22px 22px 0 0;
 }
 
 .page {
@@ -24,12 +42,78 @@ body {
   flex-direction: column
 }
 
-/*h1 {
-  text-align: center;
-  font-size: 80px;
+
+
+
+/*.memberContainer {
+  max-width: 15rem;
+  min-width: 15rem;
+
+  border-radius: 4px;
+  color: #fff;
+
+  margin: 1.2rem;
+  cursor: pointer;
+
+  transition: all 0.2s ease-out;
+}
+.memberContainer:hover {
+  box-shadow: 0 0 4em 0px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+.memberContainer:active {
+  transform: scale(1.01) translateY(0.2rem);
+}
+
+.memberContainer > .name {
+  min-height: 9.5rem;
+}
+
+.memberContainer > .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.memberContainer > .namen{ font-size: 3.5em; }
+
+.card-body > .text-wrapper {
+  padding: 0.8em;
+  font-family: 'Lato';
+  /*background-color: rgba(0, 0, 0, 0.3);*/
+ /* border-radius: 0 0 4px 4px;
 }*/
 
-/**/
+/*------------------------*/
+
+.content {
+  border: 3px solid black;
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  margin: auto;
+  background: white;
+  border-radius: 25px;
+  /*background-color: rgba(0,0,0, 0.5);;*/
+  /*box-shadow: 3px 3px 3px #ccc;*/
+}
+.close{
+  color: #777;
+  font: 14px/100% arial, sans-serif;
+  position: absolute;
+  right: 5px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #fff;
+  top: 5px;
+  text-content: '✖';
+}
+
+.below{
+margin-left: 15px;
+}
+
+/*------------------------*/
 .type span {
   display:block;
 }
@@ -105,14 +189,57 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=1,Color=#ff12385
 filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#33000000,Positive=true);
 }
 
+.twitter{
+    background: #00ABE3;
+}
 
-/*
-.head{
+.twitter:before{
+      font-family: "FontAwesome";
+      content: "\f099"; /* add twitter icon */
+}
+
+.twitter:hover{
+      color: #00ABE3;
+      background: #fff;
+}
+
+.smGlobalBtn { /* global button class */
+    /*display: inline-block;*/
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border:2px solid #ddd;
+    box-shadow: 0 2px 2px #999;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 25px;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+}
+
+.facebook{
+    background: #4060A5;
+}
+
+.facebook:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebook:hover{
+    color: #4060A5;
+    background: #fff;
+    border-color: #4060A5; /* change the border color on mouse hover */
+}
+
+.socialBtn{
   display: flex;
-  justify-content: center;
-  margin-top: 60px;
-  flex-direction: column;
-}*/
+}
 
 .form {
   /*display: flex;
@@ -122,6 +249,12 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   text-align: center;
   width: 200px;
 
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .members{
@@ -136,7 +269,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   position: relative;
 }
 
-.member-container{
+.memberContainer{
   margin-left: auto;
   margin-right: auto;
   display:flex;
@@ -149,6 +282,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   width: 320px;
   justify-content: center;
   align-items: center;
+  box-shadow: 10px 5px 40px 20px darken(#341cac, 5%);
 }
 
 .App-header {
