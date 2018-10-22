@@ -25,7 +25,6 @@ class Reps extends Component {
             {
               this.state.show &&
               <div className="content">
-                <div className="close"></div>
                 <img src="https://foreignpolicymag.files.wordpress.com/2017/10/gettyimages-83951850.jpg?w=960" alt="" />
               <div className="below">
                 <h2>{this.props.members.firstName} {this.props.members.lastName}</h2>
@@ -34,6 +33,7 @@ class Reps extends Component {
                   <a href= { `https://twitter.com/${this.props.members.twitter}` } className="twitter smGlobalBtn"></a>
                   <a href= { `https://facebook.com/${this.props.members.facebook}` } className="facebook smGlobalBtn"></a>
                 </div>
+                <a class="twitter-timeline" href="https://twitter.com/RepJohnLarson?ref_src=twsrc%5Etfw">Tweets by RepJohnLarson</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               </div>
               </div>
             }
