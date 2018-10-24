@@ -21,13 +21,15 @@ p{
   font-size: 13px;
 }
 img{
-  height: 150px;
-  width: 100%;
+  height: 162px;
   padding: 0px;
-  width:100%;
+  width:22%;
   background-size:cover;
   color:#fff;
-  border-radius: 22px 22px 0 0;
+  border-radius: 90px;
+  margin-left: 15px;
+  margin-top: 15px;
+  /*border: 5px solid black;*/
 }
 
 .page {
@@ -49,10 +51,14 @@ img{
   background: white;
   border-radius: 25px;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .below{
 margin-left: 15px;
+margin-top: 20px;
 }
 
 .type span {
@@ -240,7 +246,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 }
 
 input {
-  border-radius:5px;
+  border-radius:50px;
   padding: .75rem 1.875rem;
   height:30px;
   width:240px;

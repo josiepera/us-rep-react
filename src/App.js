@@ -16,8 +16,7 @@ class App extends Component {
       nextElection: "",
       id: "",
       district: "",
-      image: "",
-      members: []
+      members: [],
     }
   }
 
@@ -60,10 +59,12 @@ class App extends Component {
               <span>Reps</span>
               <span>Me</span>
             </div>
-            <Form getStateName={this.getStateName} />
-            <div getStateName={this.getStateName} className="members">
-            {showMembers}
-            </div>
+            <Form
+            getStateName={this.getStateName}
+            />
+                <div className="members">
+                {showMembers}
+                </div>
         </div>
     )
   }
