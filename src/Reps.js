@@ -18,28 +18,36 @@ class Reps extends Component {
     }));
   }
 
-
   render() {
     return (
       <div>
 
         <div className="memberContainer" onClick={this.toggleInfo}>
-          <Slide>
-          <h2 className="name" >{this.props.members.firstName} {this.props.members.lastName}</h2>
-          </Slide>
+
+            <div className = "card">
+
+               <img src={`https://theunitedstates.io/images/congress/225x275/${this.props.members.id}.jpg`} alt="congressional-Image"/>
+               <h2>{this.props.members.firstName} {this.props.members.lastName}</h2>
+               <p>District-{this.props.members.district}({this.props.members.party})</p>               <div className="socialBtn">
+               <a href= { `https://twitter.com/${this.props.members.twitter}` } className="twitter smGlobalBtn"></a>
+               <a href= { `https://facebook.com/${this.props.members.facebook}` } className="facebook smGlobalBtn"></a>
+             </div>
+
+            </div>
+
              {
               this.state.show &&
               <Zoom>
                 <div className="content">
-                  <img src={`https://theunitedstates.io/images/congress/original/${this.props.members.id}.jpg`} alt="congressional-Image"/>
-                <div className="below">
-                  <h2>{this.props.members.firstName} {this.props.members.lastName}</h2>
-                  <p>District-{this.props.members.district}({this.props.members.party})</p>
-                  <div className="socialBtn">
-                    <a href= { `https://twitter.com/${this.props.members.twitter}` } className="twitter smGlobalBtn"></a>
-                    <a href= { `https://facebook.com/${this.props.members.facebook}` } className="facebook smGlobalBtn"></a>
+                    <img src={`https://theunitedstates.io/images/congress/original/${this.props.members.id}.jpg`} alt="congressional-Image"/>
+                  <div className="below">
+                    <h2>{this.props.members.firstName} {this.props.members.lastName}</h2>
+                    <p>District-{this.props.members.district}({this.props.members.party})</p>
+                    <div className="socialBtn">
+                      <a href= { `https://twitter.com/${this.props.members.twitter}` } className="twitter smGlobalBtn"></a>
+                      <a href= { `https://facebook.com/${this.props.members.facebook}` } className="facebook smGlobalBtn"></a>
+                    </div>
                   </div>
-                </div>
                 </div>
               </Zoom>
             }
