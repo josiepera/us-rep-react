@@ -54,6 +54,7 @@ class App extends Component {
     })
 
       return (
+      <div>
         <div className= "page">
             <div className="bgc-pic"></div>
             <Flip>
@@ -63,15 +64,17 @@ class App extends Component {
               <span>Me</span>
             </div>
             </Flip>
+        </div>
+
+        <div className="second">
             <Form
             getStateName={this.getStateName}
             />
-
                 <div className="members">
                 {showMembers}
                 </div>
-
         </div>
+      </div>
     )
   }
 }

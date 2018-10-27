@@ -53,8 +53,11 @@ img{
   flex-direction: column;
   background-image:url("https://www.hotelgeorge.com/images/1700-960/george-hero-4-f98a1c93.jpg");
   background-size: cover;
+  height: 100vh;
 }
-
+.second{
+  height:100vh;
+}
 
 .content {
   border: 3px solid black;
@@ -215,6 +218,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   justify-content: center;
   flex-direction: column;
   margin-bottom: 10px;
+  margin-top:100px;
 }
 
 .members{
