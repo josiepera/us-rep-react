@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './Form'
 import Reps from './Reps'
+import Flip from 'react-reveal/Flip';
+import Slide from 'react-reveal/Slide';
 
 class App extends Component {
   constructor(props) {
@@ -54,17 +56,21 @@ class App extends Component {
       return (
         <div className= "page">
             <div className="bgc-pic"></div>
+            <Flip>
             <div className= "type">
               <span>Who</span>
               <span>Reps</span>
               <span>Me</span>
             </div>
+            </Flip>
             <Form
             getStateName={this.getStateName}
             />
+
                 <div className="members">
                 {showMembers}
                 </div>
+
         </div>
     )
   }
