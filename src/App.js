@@ -4,6 +4,8 @@ import Form from './Form'
 import Reps from './Reps'
 import Flip from 'react-reveal/Flip';
 import Slide from 'react-reveal/Slide';
+import ScrollTo from 'react-scroll-into-view'
+// https://www.npmjs.com/package/react-router-page-transition
 
 class App extends Component {
   constructor(props) {
@@ -64,6 +66,9 @@ class App extends Component {
               <span>Me</span>
             </div>
             </Flip>
+            <ScrollTo selector=".second">
+              <button className="enter">Enter</button>
+            </ScrollTo>
         </div>
 
         <div className="second">

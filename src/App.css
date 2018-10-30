@@ -9,7 +9,20 @@
 .root{
   background-image:url("https://www.hotelgeorge.com/images/1700-960/george-hero-4-f98a1c93.jpg");
 }
-
+.enter {
+  margin-left: 43%;
+  padding: 12px 19px;
+  background:transparent;
+  color:#fff;
+  border: 2px solid white;
+  font-size: 35px;
+  border-radius: 0px;
+  transition: all .3s ease;
+}
+.enter:hover{
+  background: white;
+  color: black;
+}
 body {
   min-height: calc(1vh*100);
   /*background: radial-gradient(#336699, #385a7c);*/
@@ -128,7 +141,7 @@ margin-top: 20px;
   margin-top:-12px;
 }
 
-button {
+form  button {
   font-size: 100%;
   display: inline-block;
   height: 50px;
