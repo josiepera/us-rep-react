@@ -68,7 +68,7 @@ class App extends Component {
             </div>
             </Flip>
             <ScrollTo selector=".second">
-              <button className="enter">Enter</button>
+              <button className="enter">Find Rep by State</button>
             </ScrollTo>
         </div>
 
