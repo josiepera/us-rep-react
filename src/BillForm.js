@@ -3,8 +3,8 @@ import React from 'react';
 const BillForm = (props) => {
 
   return (
-      <form onSubmit={props.getKeyword} className="formContainer">
-        <input type="text" name="keyword" placeholder="Search" />
+      <form onSubmit={props.getKeyWord} className="billFormContainer">
+        <input type="text" name="keyWord" placeholder="Search" />
         <button>Submit</button>
       </form>
     )

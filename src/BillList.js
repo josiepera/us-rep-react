@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Bills from './Bills'
+import BillForm from './BillForm'
 
 class BillList extends Component {
   state={
@@ -16,35 +17,34 @@ class BillList extends Component {
     bills: []
   }
 
-  componentDidMount() {
-    fetch(` https://api.propublica.org/congress/v1/bills/search.json?query=immigration`, {
+  getKeyWord = async (e) => {
+    e.preventDefault()
+    const keyWord = e.target.elements.keyWord.value
+    const apiCall = await fetch(`https://api.propublica.org/congress/v1/bills/search.json?query=${keyWord}`, {
       headers:{
         ['x-api-key']:"C2LSxHiCuV8Cl7Y6cdxotBR17BfiyiCKhgoe4ijV"
       }
     })
-      .then( res => res.json() )
-      .then( data => {
-        // console.log(data.results[0].members)
-        let mems = data.results[0].bills.map(d => {
-      return({
-        introduced_date: d.introduced_date,
-        number: d.number,
-        short_title: d.short_title,
-        sponsor_title: d.sponsor_title,
-        sponsor_name: d.sponsor_name,
-        sponsor_state: d.sponsor_state,
-        sponsor_party: d.sponsor_party,
-        house_passage: d.house_passage,
-        congressdotgov_url: d.congressdotgov_url,
-        gpo_pdf_uri:d.gpo_pdf_uri
+    const data = await apiCall.json()
+      let  bills= data.results[0].bills.map(d => {
+        return({
+          introduced_date: d.introduced_date,
+          number: d.number,
+          short_title: d.short_title,
+          sponsor_title: d.sponsor_title,
+          sponsor_name: d.sponsor_name,
+          sponsor_state: d.sponsor_state,
+          sponsor_party: d.sponsor_party,
+          house_passage: d.house_passage,
+          congressdotgov_url:d.congressdotgov_url,
+          gpo_pdf_uri:d.gpo_pdf_uri
+        })
       })
-    })
-      console.log(mems)
+      // console.log(bills)
       this.setState(prevState => ({
-        bills:mems
+        bills
       }))
-  })
-  }
+    }
 
 
   render(){
@@ -55,6 +55,9 @@ class BillList extends Component {
     return(
     <>
       <h1>Bills</h1>
+      <BillForm
+      getKeyWord={this.getKeyWord}
+      />
       <div>
         {showBills}
       </div>

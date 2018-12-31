@@ -18,7 +18,7 @@ class Bills extends Component {
       </a>
       </div>
 
-      <div classname="congressperson">
+      <div className="congressperson">
         <p>{this.props.bills.sponsor_title}</p>
         <p>{this.props.bills.sponsor_name}</p>
       </div>

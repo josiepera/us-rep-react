@@ -3,8 +3,8 @@ import './App.css';
 import Form from './Form'
 import Reps from './Reps'
 import Flip from 'react-reveal/Flip';
-import Slide from 'react-reveal/Slide';
-import ScrollTo from 'react-scroll-into-view'
+import ScrollTo from 'react-scroll-into-view';
+import { Link } from 'react-router-dom';
 
 
 class RepList extends Component {
@@ -69,6 +69,7 @@ class RepList extends Component {
             <ScrollTo selector=".second">
               <button className="enter">Find Rep by State</button>
             </ScrollTo>
+            <Link to='/bills'><button className="enter">Search Upcoming Bills</button></Link>
         </div>
 
         <div className="second">
