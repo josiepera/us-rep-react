@@ -1,11 +1,12 @@
 import React from 'react';
+import Search from "@material-ui/icons/Search";
 
 const BillForm = (props) => {
 
   return (
       <form onSubmit={props.getKeyWord} className="billFormContainer">
         <input type="text" name="keyWord" placeholder="Search" />
-        <button>Submit</button>
+        <button><Search /></button>
       </form>
     )
 }

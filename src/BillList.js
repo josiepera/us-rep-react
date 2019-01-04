@@ -53,7 +53,7 @@ class BillList extends Component {
     })
 
     return(
-    <>
+    <div className="bills">
       <h1>Bills</h1>
       <BillForm
       getKeyWord={this.getKeyWord}
@@ -61,7 +61,7 @@ class BillList extends Component {
       <div>
         {showBills}
       </div>
-    </>
+    </div>
     )
   }
 }

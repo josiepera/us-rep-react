@@ -235,6 +235,35 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   margin-bottom: 10px;
   margin-top:100px;
 }
+.billFormContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.billFormContainer input{
+  border-radius: 3px 0 0 3px !important;
+  height: 20px;
+  margin:0;
+  width: 280px;
+}
+.billFormContainer button{
+  margin-bottom: 0px;
+  background-color: white;
+  color: #2e4058 !important;
+  height: 48px;
+  box-shadow: none;
+  border-radius: 3px 0 0 3px !important;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: 0px;
+  /* border-left: white; */
+}
+.bills h1{
+  text-align: center;
+}
+
 
 .members{
   display: flex;
