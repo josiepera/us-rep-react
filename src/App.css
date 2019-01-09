@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
 @import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .App {
   text-align: center;
@@ -29,7 +29,7 @@ body {
   font-size: 30px;
   overflow-x: hidden;
   /*font-family: 'Montserrat', sans-serif;*/
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', sans-serif;
 }
 .card{
   align-content: center;
@@ -240,6 +240,7 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  align-self: flex-end;
 }
 
 .billFormContainer input{
@@ -263,7 +264,37 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 .bills h1{
   text-align: center;
 }
-
+.logo-img{
+  width:6%;
+  height: 6%;
+  margin: 0;
+  margin-right: 5px;
+}
+.billform{
+  display: flex;
+  justify-content: center;
+}
+.bills-container{
+  margin-left: 30px;
+  margin-right:20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.bill-top{
+  display: flex;
+  justify-content: space-between;
+}
+.bill-pdf{
+  align-self: center;
+}
+.bill-title{
+  width:700px;
+}
+.congressperson{
+  display:flex;
+}
+.house-passage{
+  margin-bottom: 50px;
+}
 
 .members{
   display: flex;
@@ -328,6 +359,13 @@ input {
   font-weight:400;
   font-size:16px;
   margin:5px;
+}
+
+.nav-buttons{
+
+}
+.enter{
+  margin-bottom: 16px;
 }
 
 @keyframes App-logo-spin {

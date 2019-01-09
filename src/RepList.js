@@ -66,10 +66,12 @@ class RepList extends Component {
               <span>Me</span>
             </div>
             </Flip>
+          <div className="nav-buttons">
             <ScrollTo selector=".second">
               <button className="enter">Find Rep by State</button>
             </ScrollTo>
             <Link to='/bills'><button className="enter">Search Upcoming Bills</button></Link>
+          </div>
         </div>
 
         <div className="second">
