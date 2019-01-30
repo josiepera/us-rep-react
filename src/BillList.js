@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Bills from './Bills'
 import BillForm from './BillForm'
+import Header from './Header'
 
 class BillList extends Component {
   state={
@@ -54,6 +55,7 @@ class BillList extends Component {
 
     return(
     <div className="bills">
+      <Header/>
       <h1>Bills</h1>
       <BillForm
       getKeyWord={this.getKeyWord}

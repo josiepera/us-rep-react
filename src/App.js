@@ -13,6 +13,7 @@ class App extends Component {
           <Switch>
               <Route exact path="/" component={RepList} />
               <Route exact path="/bills" component={BillList} />
+              <Route exact path="/reps" component={RepList} />
           </Switch>
         </Router>
     )

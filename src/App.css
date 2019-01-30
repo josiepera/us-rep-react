@@ -3,6 +3,9 @@
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/* *{
+  border: 1px solid black;
+} */
 .App {
   text-align: center;
 }
@@ -47,7 +50,7 @@ h2{
   font-size: 17px;
 }
 p{
-  font-size: 17px;px;
+  font-size: 17px;
 }
 img{
   height: 162px;
@@ -277,7 +280,10 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 .bills-container{
   margin-left: 30px;
   margin-right:20px;
-  border-bottom: 1px solid #d8d8d8;
+  width: 750px;
+
+  margin-top: 30px;
+  border-top: 1px solid #d8d8d8;
 }
 .bill-top{
   display: flex;
@@ -285,6 +291,18 @@ filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0,OffY=2,Color=#3300000
 }
 .bill-pdf{
   align-self: center;
+  /* border: 1px solid #5f5f5f; */
+  border: 1px solid #2e4058;
+  width: 100px;
+  text-align: center;
+  border-radius: 3px;
+  color: #2e4058;
+  text-decoration: none;
+}
+.bill-pdf:hover{
+  color: white;
+  background-color: #2e4058;
+  transition: all .3s ease-in-out;
 }
 .bill-title{
   width:700px;
@@ -367,6 +385,24 @@ input {
 .enter{
   margin-bottom: 16px;
 }
+nav{
+
+}
+li{
+  text-decoration: none;
+  color: black
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+  text-decoration: none;
+  background: #d3d3d3;
+}
+a:visited {
+  text-decoration: none;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -374,5 +410,20 @@ input {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 700px){
+  .billFormContainer input{
+    width:120px;
+  }
+  .logo-img{
+    width:16%;
+  }
+  .bill-title{
+    width: 100%;
+  }
+  .bills-container{
+    width: 100%;
+    margin-left: 0;
   }
 }
