@@ -13,7 +13,7 @@
   background-image:url("https://www.hotelgeorge.com/images/1700-960/george-hero-4-f98a1c93.jpg");
 }
 .enter {
-  margin-left: 40%;
+  /* margin-left: 40%; */
   padding: 12px 19px;
   background:transparent;
   color:#fff;
@@ -103,8 +103,9 @@ margin-top: 20px;
 }
 
 .type {
+
   margin-bottom: 0px;
-  width:400px;
+  width:100%;
   height:400px;
   margin:10px auto;
   text-align: center;
@@ -380,22 +381,33 @@ input {
 }
 
 .nav-buttons{
-
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .enter{
   margin-bottom: 16px;
 }
-nav{
 
+nav {
+  display: flex;
+  flex-direction: row;
+  background: #d3d3d3;
 }
+
 li{
+  margin-right: 15px;
+  margin-left: 15px;
   text-decoration: none;
   color: black
 }
 a{
   text-decoration: none;
+  margin: auto;
 }
 ul{
+  display: flex;
   list-style-type: none;
   text-decoration: none;
   background: #d3d3d3;
@@ -425,5 +437,8 @@ a:visited {
   .bills-container{
     width: 100%;
     margin-left: 0;
+  }
+  ul{
+    width: 100%;
   }
 }

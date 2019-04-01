@@ -5,6 +5,7 @@ function Header() {
   return(
     <>
       <nav>
+        <h3>Who Reps Me</h3>
         <ul>
           <Link to="/"><li>Home</li></Link>
           <Link to="/reps"><li>Find Reps</li></Link>
