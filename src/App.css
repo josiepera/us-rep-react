@@ -46,6 +46,10 @@ body {
 button:focus{
   outline: 0;
 }
+h3{
+  margin-left:15px;
+  font-weight: 200 !important;
+}
 h2{
   font-size: 17px;
 }
@@ -391,22 +395,33 @@ input {
 }
 
 nav {
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
   background: #d3d3d3;
+  font: bold 20px/1.4 'Open Sans', arial, sans-serif !important;
+  font-weight: 200 !important;
 }
 
 li{
   margin-right: 15px;
   margin-left: 15px;
   text-decoration: none;
-  color: black
+  color: black;
+  border-bottom: #d3d3d3 1px solid;
+  transition: .25s ease-in-out;
 }
+li:hover{
+  border-bottom: black 1px solid;
+  transition: .25s ease-in-out;
+}
+
 a{
   text-decoration: none;
   margin: auto;
 }
 ul{
+  margin-right: 10px;
   display: flex;
   list-style-type: none;
   text-decoration: none;
