@@ -15,7 +15,15 @@ class BillList extends Component {
     house_passage: "",
     congressdotgov_url:"",
     gpo_pdf_uri:"",
-    bills: []
+    bills: [],
+    currentPage: 1,
+    billsPerPage: 10
+  }
+
+  handleClick(event){
+    this.setState({
+      currentPage: Number(event.target.id)
+    });
   }
 
   getKeyWord = async (e) => {
@@ -53,6 +61,30 @@ class BillList extends Component {
       return <Bills bills={d} />
     })
 
+    const { bills, currentPage, billsPerPage } = this.state;
+
+    const indexOfLastBill = currentPage * billsPerPage;
+    const indexOfFirstBill = indexOfLastBill - billsPerPage;
+    const currentBills = bills.slice(indexOfFirstBill, indexOfLastBill);
+
+    const pageNumbers = [];
+    for (let i = 1; i <= Math.ceil(bills.length / 10); i++) {
+      pageNumbers.push(i);
+    }
+
+    const renderPageNumbers = pageNumbers.map(number => {
+      return (
+        <li
+          key={number}
+          id={number}
+          onClick={(e) => this.handleClick(e)}
+        >
+          {number}
+        </li>
+      );
+    });
+
+
     return(
     <div className="bills">
       <Header/>
@@ -63,6 +95,9 @@ class BillList extends Component {
       <div>
         {showBills}
       </div>
+      <ul id="page-numbers">
+          {renderPageNumbers}
+        </ul>
     </div>
     )
   }
