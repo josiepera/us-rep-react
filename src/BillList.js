@@ -88,7 +88,7 @@ class BillList extends Component {
     return(
     <div className="bills">
       <Header/>
-      <h1>Bills</h1>
+      <h1>Bills Search</h1>
       <BillForm
       getKeyWord={this.getKeyWord}
       />
